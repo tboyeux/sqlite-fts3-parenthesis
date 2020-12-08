@@ -12,13 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - uses: actions/checkout@v2
       - name: Publish AUR package
         uses: KSXGitHub/github-actions-deploy-aur@v2.2.3
         with:
           # AUR package name
           pkgname: sqlite-fts3-parenthesis
           # Path to PKGBUILD file
-          pkgbuild: ../../PKGBUILD
+          pkgbuild: ./PKGBUILD
           # The username to use when creating the new commit
           commit_username: ${{ secrets.AUR_USERNAME }}
           # The email to use when creating the new commit
