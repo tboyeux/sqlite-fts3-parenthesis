@@ -18,7 +18,7 @@ jobs:
           # AUR package name
           pkgname: sqlite-fts3-parenthesis
           # Path to PKGBUILD file
-          pkgbuild: ./PKGBUILD
+          pkgbuild: /PKGBUILD
           # The username to use when creating the new commit
           commit_username: ${{ secrets.AUR_USERNAME }}
           # The email to use when creating the new commit
