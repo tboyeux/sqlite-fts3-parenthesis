@@ -33,8 +33,7 @@ package() {
   install -m644 sqlite3.1 "${pkgdir}"/usr/share/man/man1/
 
   # license - no linking required because pkgbase=pkgname
-  install -D -m644 "${srcdir}"/license.txt "${pkgdir}"/usr/share/licenses/${pkgbase}/license.txt
-
+  install -D -m644 LICENSE.md "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
   # split out tcl extension
   mkdir "$srcdir"/tcl
   mv "$pkgdir"/usr/lib/sqlite* "$srcdir"/tcl
