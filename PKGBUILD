@@ -15,12 +15,10 @@ depends=('readline' 'zlib')
 conflicts=("sqlite")
 provides=("sqlite=$pkgver")
 replaces=("sqlite3")
-source=(https://www.sqlite.org/2020/sqlite-src-${_srcver}.zip        
-        license.txt)
+source=(https://www.sqlite.org/2020/sqlite-src-${_srcver}.zip)
 options=('!emptydirs' '!makeflags') # json extensions breaks parallel build
 # upstream now switched to sha3sums - currently not suppoerted by makepkg
-sha256sums=('a5c2000ece56d2de13c474658b9cdba6b7f2608a4d711e245518ea02a2a2333e'
-            '4e57d9ac979f1c9872e69799c2597eeef4c6ce7224f3ede0bf9dc8d217b1e65d')
+sha256sums=('a5c2000ece56d2de13c474658b9cdba6b7f2608a4d711e245518ea02a2a2333e')
 
 package() {
   cd sqlite-src-$_srcver
