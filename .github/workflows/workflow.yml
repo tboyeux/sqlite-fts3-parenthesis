@@ -9,28 +9,27 @@ on: [workflow_dispatch]
 jobs:
   # This workflow contains a single job called "build"
   publish-to-AUR:
+    runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Publish AUR package
-      # You may pin to the exact commit or the version.
-      # uses: KSXGitHub/github-actions-deploy-aur@e8d305d8e66a5444863f0a75eef9f2c7ecbd8915
-      uses: KSXGitHub/github-actions-deploy-aur@v2.2.3
-      with:
-        # AUR package name
-        pkgname: sqlite-fts3-parenthesis
-        # Path to PKGBUILD file
-        pkgbuild: PKGBUILD
-        # The username to use when creating the new commit
-        commit_username: ${{ secrets.AUR_USERNAME }}
-        # The email to use when creating the new commit
-        commit_email: ${{ secrets.AUR_EMAIL }}
-        # Your private key with access to AUR package.
-        ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
-        # Commit message to use when creating the new commit
-        # commit_message: # optional, default is Update PKGBUILD and .SRCINFO with GitHub Actions
-        # Allow empty commits, i.e. commits with no change.
-        # allow_empty_commits: # optional, default is true
-        # Use --force when push to the AUR.
-        # force_push: # optional, default is false
-        # Comma-separated list of types to use when adding aur.archlinux.org to known hosts
-        #ssh_keyscan_types: # optional, default is rsa,dsa,ecdsa,ed25519
+        uses: KSXGitHub/github-actions-deploy-aur@v2.2.3
+        with:
+          # AUR package name
+          pkgname: sqlite-fts3-parenthesis
+          # Path to PKGBUILD file
+          pkgbuild: PKGBUILD
+          # The username to use when creating the new commit
+          commit_username: ${{ secrets.AUR_USERNAME }}
+          # The email to use when creating the new commit
+          commit_email: ${{ secrets.AUR_EMAIL }}
+          # Your private key with access to AUR package.
+          ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
+          # Commit message to use when creating the new commit
+          # commit_message: # optional, default is Update PKGBUILD and .SRCINFO with GitHub Actions
+          # Allow empty commits, i.e. commits with no change.
+          # allow_empty_commits: # optional, default is true
+          # Use --force when push to the AUR.
+          # force_push: # optional, default is false
+          # Comma-separated list of types to use when adding aur.archlinux.org to known hosts
+          #ssh_keyscan_types: # optional, default is rsa,dsa,ecdsa,ed25519
