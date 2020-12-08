@@ -5,6 +5,7 @@ pkgbase = sqlite-fts3-parenthesis
         url = https://www.sqlite.org/
         arch = x86_64
         license = custom:Public Domain
+        makedepends = tcl
         depends = readline
         depends = zlib
         provides = sqlite=3.34.0

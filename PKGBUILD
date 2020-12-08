@@ -10,6 +10,7 @@ pkgdesc="A C library that implements an SQL database engine. Compiled with 'SQLI
 arch=('x86_64')
 license=('custom:Public Domain')
 url="https://www.sqlite.org/"
+makedepends=('tcl')
 depends=('readline' 'zlib')
 conflicts=("sqlite")
 provides=("sqlite=$pkgver")
