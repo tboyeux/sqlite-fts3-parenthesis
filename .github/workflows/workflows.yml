@@ -29,11 +29,11 @@ jobs:
         # Path to PKGBUILD file
         pkgbuild: PKGBUILD
         # The username to use when creating the new commit
-        commit_username: Thibault Boyeux
+        commit_username: ${{ secrets.AUR_USERNAME }}
         # The email to use when creating the new commit
-        commit_email: thibault.boyeux@gmail.com
+        commit_email: ${{ secrets.AUR_EMAIL }}
         # Your private key with access to AUR package.
-        ssh_private_key: test
+        ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
         # Commit message to use when creating the new commit
         # commit_message: # optional, default is Update PKGBUILD and .SRCINFO with GitHub Actions
         # Allow empty commits, i.e. commits with no change.
